@@ -1,0 +1,187 @@
+@prefix : <http://www.semanticweb.org/ontologies/2024/books_recurso/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontologies/2024/books_recurso/> .
+
+<http://www.semanticweb.org/ontologies/2024/books_recurso> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso#book_has_char
+:book_has_char rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso#book_has_genre
+:book_has_genre rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso#char_id
+:char_id rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Chars .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso#genre_id
+:genre_id rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Genre .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_author
+:book_author rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_awards
+:book_awards rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_bbeScore
+:book_bbeScore rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Book ;
+               rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_bbeVotes
+:book_bbeVotes rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Book ;
+               rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_bookFormat
+:book_bookFormat rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_bookId
+:book_bookId rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_character
+:book_character rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_coverImg
+:book_coverImg rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_description
+:book_description rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_edition
+:book_edition rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_firstPublishDate
+:book_firstPublishDate rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_genres
+:book_genres rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_isbn
+:book_isbn rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Book ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_language
+:book_language rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_likedPercent
+:book_likedPercent rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Book ;
+                   rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_numRatings
+:book_numRatings rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Book ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_pages
+:book_pages rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_price
+:book_price rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Book ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_publishDate
+:book_publishDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Book ;
+                  rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_publisher
+:book_publisher rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_rating
+:book_rating rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book ;
+             rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_ratingByStars
+:book_ratingByStars rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Book ;
+                    rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_series
+:book_series rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_setting
+:book_setting rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Book .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/book_title
+:book_title rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Book .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso#Chars
+:Chars rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso#Genre
+:Genre rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2024/books_recurso/Book
+:Book rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

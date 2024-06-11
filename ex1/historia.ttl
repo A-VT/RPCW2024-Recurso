@@ -1,0 +1,172 @@
+@prefix : <http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/> .
+
+<http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/person_studies
+:person_studies rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149#has_course
+:has_course rdf:type owl:ObjectProperty ;
+            rdfs:domain :University ;
+            rdfs:range :Course .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149#lectures_class_about
+:lectures_class_about rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Course ;
+                      rdfs:range :Language .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/person_is_learning
+:person_is_learning rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Person ;
+                    rdfs:range :Language .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/person_lectures
+:person_lectures rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range :Course .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/person_speaks
+:person_speaks rdf:type owl:ObjectProperty ;
+               rdfs:domain :Person ;
+               rdfs:range :Language .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149#course_name
+:course_name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/from
+:from rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/person_name
+:person_name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/uni_name
+:uni_name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149#Course
+:Course rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Language
+:Language rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/University
+:University rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149#Escola_de_Letras_Artes_e_Ciencias_Humanas
+:Escola_de_Letras_Artes_e_Ciencias_Humanas rdf:type owl:NamedIndividual ,
+                                                    :Course ;
+                                           :has_course :Escola_de_Letras_Artes_e_Ciencias_Humanas .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Alemao
+:Alemao rdf:type owl:NamedIndividual ,
+                 :Language .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Ana
+:Ana rdf:type owl:NamedIndividual ,
+              :Person ;
+     :person_is_learning :Alemao ;
+     :person_name "Ana" .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Carlos
+:Carlos rdf:type owl:NamedIndividual ,
+                 :Person ;
+        :person_is_learning :Alemao ;
+        :person_name "Carlos" .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Eduardo
+:Eduardo rdf:type owl:NamedIndividual ,
+                  :Person ;
+         :person_is_learning :Alemao ;
+         :person_speaks :Espanhol ,
+                        :Ingles ,
+                        :Portugues ;
+         :from "Porto" ;
+         :person_name "Eduardo" ;
+         :person_studies :UMinho .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Espanhol
+:Espanhol rdf:type owl:NamedIndividual ,
+                   :Language .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Hanna
+:Hanna rdf:type owl:NamedIndividual ,
+                :Person ;
+       :person_is_learning :Alemao ;
+       :from "Alemanha" ;
+       :person_name "Hanna" ;
+       :person_is_learning "Portugues" .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Ingles
+:Ingles rdf:type owl:NamedIndividual ,
+                 :Language .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Portugues
+:Portugues rdf:type owl:NamedIndividual ,
+                    :Language .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Ratz
+:Ratz rdf:type owl:NamedIndividual ,
+               :Person ;
+      :lectures_class_about :Alemao ;
+      :person_lectures :Escola_de_Letras_Artes_e_Ciencias_Humanas ;
+      :person_speaks :Alemao ;
+      :person_name "Helmut Ratz" .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/5/untitled-ontology-149/Uminho
+:Uminho rdf:type owl:NamedIndividual ,
+                 :University .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
